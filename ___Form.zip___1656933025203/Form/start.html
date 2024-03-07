@@ -16,21 +16,21 @@
   </head>
 
   <body>
-    <form>
+    <form action="/">
       <label for="email">Email</label>
-      <input type="email" name="email" placeholder="youremail@example.com" />
+      <input type="email" name="email" id="email" placeholder="youremail@example.com" />
       <br /><br />
 
       <label for="password">Password</label>
-      <input type="password" name="password" placeholder="Password" />
+      <input type="password" name="password" id="password" placeholder="Password" />
       <br /><br />
 
       <label for="name">Name and Lastname</label>
-      <input type="text" name="name" placeholder="eg. Rubén Lucena" />
+      <input type="text" name="name" id="name" placeholder="eg. Rubén Lucena" />
       <br /><br />
 
       <label for="DateOfBirth">Date of Birth</label>
-      <input type="date" name="DateOfBirth" />
+      <input type="date" name="DateOfBirth" id="DateOfBirth"/>
       <br /><br />
 
       <label for="phone">Telephone Number</label>
@@ -39,28 +39,30 @@
         name="phone"
         id="phone"
         pattern="+34 [0-9]{9}"
-        max="13"
+        maxlength="13"
       />
       <br /><br />
 
       <label for="plans">List of Plans</label>
       <select id="plans" name="plans">
         <option value="free">Free Plan</option>
-        <option value="plan1">Vip Plan (10€)</option>
-        <option value="plan2">Premium Plan (15€)</option>
-        <option value="plan3">Supreme Plan (20€)</option></select
-      ><br /><br />
+        <optgroup label="Paid Plans">
+          <option value="plan1">Vip Plan (10€)</option>
+          <option value="plan2">Premium Plan (15€)</option>
+          <option value="plan3">Supreme Plan (20€)</option></select>
+        </optgroup>
+      <br /><br />
 
       <label for="ProPlan">Pro Plan (+25€)</label>
       <input type="checkbox" name="ProPlan" id="ProPlan" />
       <br /><br />
 
       <label for="creditCard">Credit Card Number</label>
-      <input type="text" name="creditCard" id="creditCard" />
+      <input type="text" name="creditCard" id="creditCard" maxlength="16"/>
       <br /><br />
 
       <label for="cvc">CVC</label>
-      <input type="text" name="cvc" id="cvc" />
+      <input type="text" name="cvc" id="cvc" maxlength="3"/>
       <br /><br />
 
       <label for="expirationDate">Expiration Date</label>
@@ -71,7 +73,7 @@
       <input type="text" name="billingAddress" id="billingAddress" />
       <br /><br />
 
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
